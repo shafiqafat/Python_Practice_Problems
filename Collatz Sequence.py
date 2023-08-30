@@ -10,8 +10,10 @@ def collatz(number):
         print(number)
 
 def main():
-    number = int(input("Enter Number: "))
-    collatz(number)
-
+    try:
+        number = int(input("Enter Number: "))
+        collatz(number)
+    except ValueError:
+        print("Invalid Input")
 if __name__ == "__main__":
     main()
